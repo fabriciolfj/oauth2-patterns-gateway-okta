@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Greeting</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1><p th:text="'Hello, ' + ${username} + '!'" ></p></h1>
+
+<p th:text="'idToken: ' + ${idToken.tokenValue}" ></p><br/>
+<p th:text="'accessToken: ' + ${accessToken.tokenValue}" ></p><br>
+
+</body>
+</html>
