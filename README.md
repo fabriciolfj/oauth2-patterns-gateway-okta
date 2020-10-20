@@ -25,4 +25,7 @@ curl   -d '{"customerId": "fabricio@live.com", "lineItems": [{ "productName": "c
 
 #Consultando um cart:
 curl -H 'Accept: application/json' -H "Authorization: Bearer ${ACCESS_TOKEN}" http://localhost:8080/cart/1
+
+#Adicionando preço aos itens
+curl  -d '{"customerId": "fabricio@live.com", "lineItems": [{ "productName": "jeans", "quantity": 1}]}' -H 'Content-Type: application/json' -H 'Accept: application/json' http://localhost:8082/pricing/price
 ``` 
