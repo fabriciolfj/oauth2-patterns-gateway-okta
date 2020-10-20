@@ -16,6 +16,11 @@ OKTA_OAUTH2_CLIENT_SECRET={yourOktaClientSecret} \
 
 Para gerar o token, apenas acesse: http://localhost:8080/greeting.
 
+###### Detalhes da implementação
+- O ribbon foi desabilitado para que ReactorLoadBalancer funcione.
+- Usamos o scope customizado "pricing".
+- Spring boot auto configurou a aplicação como client oauth2, devido ao client.registration presente no arquivo application.yaml.
+
 ###### Exemplos de requisições:
 
 export ACCESS_TOKEN={accessToken}
