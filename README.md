@@ -23,6 +23,6 @@ export ACCESS_TOKEN={accessToken}
 #Adicionando um cart:
 curl   -d '{"customerId": "fabricio@live.com", "lineItems": [{ "productName": "camisa", "quantity": 3}]}' -H "Authorization: Bearer ${ACCESS_TOKEN}" -H 'Content-Type: application/json' -H 'Accept: application/json' http://localhost:8080/cart
 
-@Consultando um cart:
- curl -H 'Accept: application/json' -H "Authorization: Bearer ${ACCESS_TOKEN}" http://localhost:8080/cart/1
+#Consultando um cart:
+curl -H 'Accept: application/json' -H "Authorization: Bearer ${ACCESS_TOKEN}" http://localhost:8080/cart/1
 ``` 
