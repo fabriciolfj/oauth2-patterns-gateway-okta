@@ -1,4 +1,4 @@
-package com.fabriciolfj.github.cartservice.util;
+package com.fabriciolfj.github.cartservice.infrastructure.util;
 
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;

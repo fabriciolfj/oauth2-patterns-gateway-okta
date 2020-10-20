@@ -1,4 +1,4 @@
-package com.fabriciolfj.github.cartservice.infrastructure;
+package com.fabriciolfj.github.cartservice.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

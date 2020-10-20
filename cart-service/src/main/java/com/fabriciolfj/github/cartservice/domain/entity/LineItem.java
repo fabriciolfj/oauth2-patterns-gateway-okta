@@ -1,6 +1,6 @@
 package com.fabriciolfj.github.cartservice.domain.entity;
 
-import com.fabriciolfj.github.cartservice.util.MoneyConverter;
+import com.fabriciolfj.github.cartservice.infrastructure.util.MoneyConverter;
 import lombok.Data;
 
 import javax.money.MonetaryAmount;
