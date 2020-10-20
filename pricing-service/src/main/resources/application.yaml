@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: pricing
+
+okta:
+  oauth2:
+    issuer: https://dev-3908506.okta.com/oauth2/default
+    audience: api://default
