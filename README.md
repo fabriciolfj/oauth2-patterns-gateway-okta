@@ -16,6 +16,11 @@ OKTA_OAUTH2_CLIENT_SECRET={yourOktaClientSecret} \
 
 Para gerar o token, apenas acesse: http://localhost:8080/greeting.
 
+###### Detalhes da implementação
+- O ribbon foi desabilitado para que ReactorLoadBalancer funcione.
+- Usamos o scope customizado "pricing".
+- Spring boot auto configurou a aplicação como client oauth2, devido ao client.registration presente no arquivo application.yaml.
+
 ###### Exemplos de requisições:
 
 export ACCESS_TOKEN={accessToken}
@@ -29,3 +34,5 @@ curl -H 'Accept: application/json' -H "Authorization: Bearer ${ACCESS_TOKEN}" ht
 #Adicionando preço aos itens
 curl  -d '{"customerId": "fabricio@live.com", "lineItems": [{ "productName": "jeans", "quantity": 1}]}' -H 'Content-Type: application/json' -H 'Accept: application/json' http://localhost:8082/pricing/price
 ``` 
+
+###### Para criar sua conta, acesse: https://developer.okta.com/
