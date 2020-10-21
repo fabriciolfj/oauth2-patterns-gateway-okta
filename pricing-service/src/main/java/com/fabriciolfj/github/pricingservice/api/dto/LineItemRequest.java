@@ -2,14 +2,14 @@ package com.fabriciolfj.github.pricingservice.api.dto;
 
 import lombok.Data;
 
-import javax.money.MonetaryAmount;
+import java.math.BigDecimal;
 
 @Data
 public class LineItemRequest {
 
     private Integer id;
     private Integer quantity;
-    private MonetaryAmount price;
+    private BigDecimal price;
     private String productName;
 
     public LineItemRequest() {

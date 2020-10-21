@@ -1,16 +1,19 @@
 package com.fabriciolfj.github.cartservice.domain.entity;
 
-import com.fabriciolfj.github.cartservice.infrastructure.util.MoneyConverter;
+import lombok.Builder;
 import lombok.Data;
-
-import javax.money.MonetaryAmount;
+import lombok.EqualsAndHashCode;
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
+@Builder
 @Entity
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class LineItem {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
@@ -18,6 +21,5 @@ public class LineItem {
 
     private Integer quantity;
 
-    @Convert(converter = MoneyConverter.class)
-    private MonetaryAmount price;
+    private BigDecimal price;
 }

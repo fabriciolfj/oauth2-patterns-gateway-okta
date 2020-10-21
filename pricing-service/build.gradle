@@ -27,8 +27,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
 
-	compile group: 'org.zalando', name: 'jackson-datatype-money', version: '1.2.0'
-
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

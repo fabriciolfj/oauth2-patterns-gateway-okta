@@ -1,10 +1,8 @@
 package com.fabriciolfj.github.cartservice.domain.entity;
 
-import com.fabriciolfj.github.cartservice.infrastructure.util.MoneyConverter;
 import lombok.Data;
-
-import javax.money.MonetaryAmount;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +16,7 @@ public class Cart {
 
     private String customerId;
 
-    @Convert(converter = MoneyConverter.class)
-    private MonetaryAmount total;
+    private BigDecimal total;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<LineItem> lineItems = new ArrayList<>();

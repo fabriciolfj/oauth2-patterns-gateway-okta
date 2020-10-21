@@ -1,11 +1,32 @@
 server:
-  port: 8081
+  port: 8089
 
 spring:
   application:
     name: cart
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-3908506.okta.com/oauth2/default
+      client:
+        registration:
+          pricing-client:
+            provider: okta
+            authorizationGrantType: client_credentials
+            scope:
+              - pricing
+            clientId: 0oac3cwqG2Ndudlq25d5
+            clientSecret: q5DLA6SEMS83_gLKlGvSKOjGJh01FhhQmnVj0uEL
+        provider:
+          okta:
+            issuerUri: https://dev-3908506.okta.com/oauth2/default
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
-okta:
-  oauth2:
-    issuer: https://dev-3908506.okta.com/oauth2/default
-    audience: api://default
+logging:
+  level:
+    com.okta.developer: DEBUG
+    org.springframework.web: DEBUG
