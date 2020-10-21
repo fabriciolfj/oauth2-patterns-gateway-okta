@@ -34,3 +34,5 @@ curl -H 'Accept: application/json' -H "Authorization: Bearer ${ACCESS_TOKEN}" ht
 #Adicionando preço aos itens
 curl  -d '{"customerId": "fabricio@live.com", "lineItems": [{ "productName": "jeans", "quantity": 1}]}' -H 'Content-Type: application/json' -H 'Accept: application/json' http://localhost:8082/pricing/price
 ``` 
+
+###### Para criar sua conta, acesse: https://developer.okta.com/
